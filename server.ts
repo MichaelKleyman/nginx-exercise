@@ -10,7 +10,7 @@ const appName = process.env.APP_NAME;
 app.use("/images/*", serveStatic({ root: "./" }));
 
 app.get("/", async (c) => {
-  console.log("Request served by bun app");
+  console.log(`Request served by bun app ${appName}`);
 
   // Read the HTML file and return its content
   const file = Bun.file("index.html");
